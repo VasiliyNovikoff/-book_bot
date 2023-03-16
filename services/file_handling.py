@@ -1,5 +1,5 @@
 BOOK_PATH = 'book/Bredberi_Marsianskie-hroniki.txt'
-PAGE_SIZE = 850
+PAGE_SIZE = 1050
 
 book: dict[int, str] = {}
 
@@ -27,6 +27,8 @@ def prepare_book(path: str) -> None:
     page = 1
     while start < book_len:
         page_text, page_len = _get_part_text(book_file, start, size=PAGE_SIZE)
+        if page_len == 0:
+            break
         book[page] = page_text.lstrip()
         start += page_len
         page += 1

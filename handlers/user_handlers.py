@@ -5,7 +5,7 @@ from database.database import users_dp, user_dict_template
 from copy import deepcopy
 from lexicon.lexicon import LEXICON
 from keyboards.pagination_kb import create_pagination_keyboard
-from services.file_hadling import book
+from services.file_handling import book
 from keyboards.bookmarks_kb import create_bookmarks_keyboard, create_edit_bookmarks
 from filters.filters import IsDigitCallbackData, IsDelBookmarkCallbackData
 
