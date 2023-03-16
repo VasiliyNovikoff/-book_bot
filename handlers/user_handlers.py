@@ -102,7 +102,7 @@ async def process_backward_press(callback: CallbackQuery):
 
 # Этот хэндлер будет срабатывать на нажатие инлайн-кнопки
 # с номером текущей страницы и добавлять текущую страницу в закладки
-@router.callback_query(lambda x: '/' in x.data and x.data.repalce('/', '').isdigit())
+@router.callback_query(lambda x: '/' in x.data and x.data.replace('/', '').isdigit())
 async def process_page_press(callback: CallbackQuery):
     users_dp[callback.from_user.id]['bookmarks'].add(
         users_dp[callback.from_user.id]['page'])
